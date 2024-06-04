@@ -10,7 +10,7 @@ public class AnsiTest {
     @Test
     public void testConvertToAnsi_BoldText() {
         String markdownText = "**This is bold text**";
-        String expectedAnsiText = "\u001B[1mThis is bold text";
+        String expectedAnsiText = "\u001B[1mThis is bold text\u001B[22m";
         assertEquals(expectedAnsiText, Main.convertMarkdownToAnsi(markdownText,false  ));
     }
 
