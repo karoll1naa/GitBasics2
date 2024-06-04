@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         String inputFile = args[0];
         String outputFile = args[1];
-        String format = "Html";
+        String format = "html";
 
         for (int i = 2; i < args.length; i++) {
             if (args[i].equals("--format")) {
@@ -21,7 +21,7 @@ public class Main {
         String line;
         boolean inPreformatted = false;
 
-        if (format.equals("Html")) {
+        if (format.equals("html")) {
             while ((line = reader.readLine()) != null) {
                 if (line.startsWith("```")) {
                     if (inPreformatted) {
@@ -49,7 +49,7 @@ public class Main {
                 content.append("</p>");
             }
 
-        } else if (format.equals("Ansi")) {
+        } else if (format.equals("ansi")) {
             while ((line = reader.readLine()) != null) {
                 if (line.startsWith("```")) {
                     if (inPreformatted) {
